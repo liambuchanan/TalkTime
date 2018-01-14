@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TalkTime" customModuleProvider="target">
+            <connections>
+                <outlet property="settingsSlider" destination="TdN-n5-BFw" id="8Ny-cF-vBe"/>
+                <outlet property="settingsSliderLabel" destination="bBe-sP-rjz" id="f6u-Zo-MTL"/>
+                <outlet property="statusMenu" destination="bjC-Tj-oKS" id="hA1-Bj-ski"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="bjC-Tj-oKS">
+            <items>
+                <menuItem title="Settings" id="9Mh-bx-yCL">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="9oh-zS-1Vn" id="a65-BM-2L2"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="7mT-8a-oHs"/>
+                <menuItem title="Start" id="Qad-Gi-syI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startClicked:" target="Voe-Tx-rLC" id="6cX-wa-8OT"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Stop" id="c7d-gt-DxH">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="stopClicked:" target="Voe-Tx-rLC" id="Ffw-Tn-eRQ"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="dHN-Mu-nph"/>
+                <menuItem title="Quit" id="ddt-k9-3FJ" userLabel="Quit">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="Voe-Tx-rLC" id="PXu-Ja-rLo"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-54" y="-293"/>
+        </menu>
+        <customView id="9oh-zS-1Vn" userLabel="Adjust Settings View">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdN-n5-BFw">
+                    <rect key="frame" x="14" y="29" width="96" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="4" tickMarkPosition="below" numberOfTickMarks="5" allowsTickMarkValuesOnly="YES" sliderType="linear" id="kwB-jX-qbE"/>
+                    <connections>
+                        <action selector="sliderActionReceived:" target="Voe-Tx-rLC" id="a3b-Y0-Ney"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRi-RP-f6t">
+                    <rect key="frame" x="2" y="5" width="124" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="bBe-sP-rjz">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="-28" y="-172.5"/>
+        </customView>
+    </objects>
+</document>
