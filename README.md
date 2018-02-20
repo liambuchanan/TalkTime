@@ -4,11 +4,11 @@
 
 This is a small status bar app for macOS intended to be like a metronome for study. Using the system speech synthesizer it will announce the total elapsed time every time the specified interval elapses.
 
-## Usage
-
-![](./images/usage.png)
+## Use
 
 Select the interval you would like between announcements, then click Start.
+
+![](./images/use.png)
 
 ## Installation
 
