@@ -1,4 +1,4 @@
-![](./TalkTime/Assets.xcassets/AppIcon.appiconset/metronome_64px.png)
+![](./TalkTime/Assets.xcassets/AppIcon.appiconset/metronome_128px.png)
 
 # TalkTime
 
